@@ -1,7 +1,7 @@
 # TODO: Change the name of the org 
 org: renzdev
 app: serverless-todo-app
-service: serverless-todo-app
+service: serverless-todo-app-service
 
 plugins:
   - serverless-iam-roles-per-function
@@ -243,5 +243,5 @@ resources:
               - s3:GetObject
               - s3:PutObject
               - s3:DeleteObject
-              Resource: 'arn:aws:s3:::${self:provider.environment.TODOS_S3_BUCKET}/*'
+              Resource: arn:aws:s3:::${self:provider.environment.TODOS_S3_BUCKET}/*
         Bucket: !Ref AttachmentsBucket
