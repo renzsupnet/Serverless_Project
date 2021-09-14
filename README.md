@@ -21,6 +21,10 @@ CloudFormation Stack Creation:
 
 <img src="screenshots/stack.PNG" width="300"/>
 <br></br>
+CreateTodo Minimum Length (Prevents null input):
+<br></br>
+<img src="screenshots/alert.PNG" width="300"/>
+<br></br>
 User gets TodoItems but is inaccessible to other users:
 <img src="screenshots/success1.PNG" width="400"/>
 <br></br>
