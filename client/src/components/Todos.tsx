@@ -46,6 +46,10 @@ export class Todos extends React.PureComponent<TodosProps, TodosState> {
 
   onTodoCreate = async (event: React.ChangeEvent<HTMLButtonElement>) => {
     try {
+      if (this.state.newTodoName.length < 5) {
+        alert(unescape("Please enter at least 5 characters."));
+        return false
+    }
       const dueDate = this.calculateDueDate()
       const newTodo = await createTodo(this.props.auth.getIdToken(), {
         name: this.state.newTodoName,
@@ -56,9 +60,11 @@ export class Todos extends React.PureComponent<TodosProps, TodosState> {
         newTodoName: ''
       })
     } catch {
+
       alert('Todo creation failed')
     }
   }
+
 
   onTodoDelete = async (todoId: string) => {
     try {
