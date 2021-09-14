@@ -1,4 +1,44 @@
-# Serverless TODO
+
+
+# Project Completed
+
+All tasks has been accomplished, code has been updated and screenshots included in the Successful Implementation section below:
+
+# Successful Implementation
+Authenticated using auth0:
+
+
+<img src="screenshots/login.PNG" width="20%" height="20%"/>
+
+Deployed using serverless deploy -v:
+<br></br>
+<img src="screenshots/deploy.PNG" width="400"/>
+<br></br>
+Serverless Dashboard:
+<img src="screenshots/serverless.PNG" width="400"/>
+<br></br>
+CloudFormation Stack Creation:
+
+<img src="screenshots/stack.PNG" width="300"/>
+<br></br>
+User gets TodoItems but is inaccessible to other users:
+<img src="screenshots/success1.PNG" width="400"/>
+<br></br>
+Uploads image to s3 using a signedUrl and axios.put method:
+<img src="screenshots/success2.PNG" width="400"/>
+<br></br>
+Amazon Xray Logs:
+<img src="screenshots/xray.PNG" width="400"/>
+<br></br>
+Amazon Clodwatch Logs:
+<img src="screenshots/cloudwatch.PNG" width="400"/>
+<br></br>
+
+
+
+
+
+# Serverless TODO 
 
 To implement this project, you need to implement a simple TODO application using AWS Lambda and Serverless framework. Search for all comments starting with the `TODO:` in the code to find the placeholders that you need to implement.
 
@@ -8,6 +48,7 @@ This application will allow creating/removing/updating/fetching TODO items. Each
 
 # TODO items
 
+<br></br>
 The application should store TODO items, and each TODO item contains the following fields:
 
 * `todoId` (string) - a unique id for an item
@@ -39,7 +80,8 @@ You might also store an id of a user who created a TODO item.
    # You need to have a pair of Access key (YOUR_ACCESS_KEY_ID and YOUR_SECRET_KEY) of an IAM user with Admin access permissions
    sls config credentials --provider aws --key YOUR_ACCESS_KEY_ID --secret YOUR_SECRET_KEY --profile serverless
    ```
-   
+
+
 # Functions to be implemented
 
 To implement this project, you need to implement the following functions and configure them in the `serverless.yml` file:

@@ -15,10 +15,10 @@ export const handler = middy(
     logger.info(`Processing event: ${event}`)
 
     const userId = getUserId(event)
-    const Url = await getUploadUrl(todoId)
-    const attachmentId = Url.split("?")[0]
+    const uploadUrl = await getUploadUrl(todoId)
+    const attachmentId = uploadUrl.split("?")[0]
 
-    logger.info(`Created upload URL ${Url}`)
+    logger.info(`Created upload URL ${uploadUrl}`)
 
     await updateUrl(userId, todoId, attachmentId)
     
@@ -30,7 +30,7 @@ export const handler = middy(
       },
 
       body: JSON.stringify({
-        item: Url
+        uploadUrl
       })
     }
 })
