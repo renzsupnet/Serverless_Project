@@ -15,6 +15,7 @@ Deployed using serverless deploy -v:
 <img src="screenshots/deploy.PNG" width="400"/>
 <br></br>
 Serverless Dashboard:
+<br></br>
 <img src="screenshots/serverless.PNG" width="400"/>
 <br></br>
 CloudFormation Stack Creation:
